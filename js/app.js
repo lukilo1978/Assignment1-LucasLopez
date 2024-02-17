@@ -1,12 +1,14 @@
 
-
+/* Arrays for each category*/ 
 let array1 = ["The dog", "The cat", "The baby", "The babysitter", "The Butcher"];
 let array2 = ["kissed" , "called", "helped", "hugged" , "hit"];
 let array3 = ["a scary", "a mischievous", "a hysterical", "a good-looking", "a grumpy"];
 let array4 = ["umbrella" , "farmer", "princess", "owl" , "rabbit" ];
 let array5 = ["at the airport" , "at a barn" , "at a castle" , "at a supermarket" , "at a dog camp"];
 let arrays = [array1, array2, array3, array4, array5];
+/* Array to store selected words*/ 
 let selectedWords = [];
+/* Array to map the word to the image url*/ 
 let imageMap = {
     "The dog": "resources/dog.jpg",
     "The cat": "resources/cat.avif",
@@ -35,7 +37,7 @@ let imageMap = {
     "at a dog camp": "resources/dog-camp.jpg"
 };
 
-
+/*Selects a random word on the array based on the button presses*/ 
 function selectRandomWord(index) {
     let selectedArray = arrays[index];
     let randomIndex = Math.floor(Math.random() * selectedArray.length);
@@ -44,6 +46,7 @@ function selectRandomWord(index) {
 	selectedWords[index] = randomWord;
 	speak(randomWord);
 }
+/*Generates and passes the sentence*/
 function generateSentence() {
     let sentence = selectedWords.filter(word => word !== undefined).join(' ');
     document.getElementById('sentence').textContent = sentence;
@@ -51,6 +54,7 @@ function generateSentence() {
     speak(selectedWords);
 
 }
+/*Text to speach and image mapping*/ 
 function speak(word) {
     const speech = new SpeechSynthesisUtterance();
     speech.text = word;
