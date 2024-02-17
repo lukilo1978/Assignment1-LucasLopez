@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Assignment 1 | COMP1073 Client-Side JavaScript</title>
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+	<h1>Assignment 1</h1>
+	<h3>Lucas Lopez</h3>
+	<h4>200551128</h4>
+	<div class="content">
+		<div class="element-1">
+			<img id="image1"src="resources/happy.jpg" alt="Image">
+			<div class="elements-wrapper">
+				<button onClick="selectRandomWord(0)">Noun</button>
+				<button onClick="selectRandomWord(1)">Verb</button>
+				<button onClick="selectRandomWord(2)">Adjective</button>
+				<button onClick="selectRandomWord(3)">Noun</button>
+				<button onClick="selectRandomWord(4)">Location</button>
+			</div>
+		</div>
+
+	<button onClick="generateSentence()">Sentence</button>
+	<p id="sentence"></p>
+
+	</div>
+	<script src="js/app.js"></script>
+</body>
+</html>
